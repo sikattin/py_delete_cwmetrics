@@ -2,7 +2,10 @@ import re
 import boto3
 import logging
 import json
-"""
+"""CloudWatch ダッシュボードウィジェットのメトリクスを削除する
+
+ボリュームが削除をトリガーにして起動させる用のスクリプト
+
 1. {id: id, VolumeId: VolumeIdリテラルのアスキーコードのシーケンス , ascii: VolumeIdリテラルのアスキーコード合計, index: 当該metricsのindex番号}のリストを生成する
 2. 1.をアスキーコード合計をキーにソートする
 3. 2分探索で削除ボリュームが含まれた1. のindexをもとめる。
